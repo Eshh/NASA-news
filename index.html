@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,54 @@
     <!-- ZTM Favicon -->
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
 </head>
+
 <body>
+    <div class="loader hidden">
+        <img src="./rocket-1.svg" alt="loader">
+    </div>
+
+    <div class="container">
+        <div class="navigation-container">
+            <span class="background"></span>
+            <span class="navigation-items" id="resultsNav">
+                <h3 class="clickable">Favorites</h3>
+                <h3 style="margin-top: 30px;">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="clickable">Load More</h3>
+            </span>
+
+            <span class="naviation-items hidden" id="favoritesNav">
+                <h3 class="clickable">Load more NASA images</h3>
+            </span>
+        </div>
+        <div class="images-container">
+            <!-- <div class="card">
+                <a href="" title="View Full Image" target="_blank">
+                    <img src="https://apod.nasa.gov/apod/image/2307/M64Hubble.jpg" alt="Nasa Picture of the day"
+                        class="card-img-top">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="add-to-fav">Add to Favorites</p>
+                    <h3>Title of the image</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est labore omnis
+                        maxime exercitationem ipsam sapiente esse quibusdam minima quod eligendi necessitatibus libero
+                        dolore, a vel vero modi commodi magni, cumque fugiat, eveniet excepturi cum officia saepe! Sit
+                        atque nostrum enim ipsum ea cupiditate aliquam minus dolorem consequuntur dignissimos, veritatis
+                        aspernatur.</p>
+                    <small class="text-muted">
+                        <strong>12-12-2023</strong>
+                        <span>&copy;Info</span>
+                    </small>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="save-confirmed hidden">
+        <h3>Added to Favorites!</h3>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
