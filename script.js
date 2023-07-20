@@ -14,9 +14,10 @@ const saveConfirmed = document.querySelector(".save-confirmed");
 const loader = document.querySelector(".loader");
 
 async function getNasaData() {
+  loader.classList.remove("hidden");
   try {
     resultsArray = await (await fetch(apiUrl)).json();
-    updateDOM("favorites");
+    updateDOM("results");
   } catch (error) {
     alert(error);
   }
@@ -25,6 +26,7 @@ async function getNasaData() {
 function updateDOM(flag) {
   let arr = [];
   let content = "";
+  imagesContainer.textContent = "";
   if (flag == "favorites") {
     arr = Object.values(JSON.parse(localStorage.getItem("nasa-favorites")));
   } else {
@@ -65,6 +67,16 @@ function updateDOM(flag) {
     //   .getElementById(i)
     //   .setAttribute("onclick", `saveFavorite('${each.url}')`);
   });
+  console.log(flag);
+  if (flag == "results") {
+    resultsNav.classList.remove("hidden");
+    favoritesNav.classList.add("hidden");
+  } else {
+    resultsNav.classList.add("hidden");
+    favoritesNav.classList.remove("hidden");
+  }
+  window.scrollTo({ top: 0, behavior: "instant" });
+  loader.classList.add("hidden");
 }
 
 function saveFavorite(each) {

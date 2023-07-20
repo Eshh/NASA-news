@@ -20,13 +20,13 @@
         <div class="navigation-container">
             <span class="background"></span>
             <span class="navigation-items" id="resultsNav">
-                <h3 class="clickable">Favorites</h3>
+                <h3 onclick="updateDOM('favorites')" class="clickable">Favorites</h3>
                 <h3 style="margin-top: 30px;">&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
-                <h3 class="clickable">Load More</h3>
+                <h3 class="clickable" onclick="getNasaData()">Load More</h3>
             </span>
 
-            <span class="naviation-items hidden" id="favoritesNav">
-                <h3 class="clickable">Load more NASA images</h3>
+            <span class="naviation-items" id="favoritesNav">
+                <h3 class="clickable" onclick="getNasaData()">Load more NASA images</h3>
             </span>
         </div>
         <div class="images-container">
