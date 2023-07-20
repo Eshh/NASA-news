@@ -32,6 +32,16 @@ function updateDOM(flag) {
   } else {
     arr = resultsArray;
   }
+  if (arr == undefined || arr.length == 0) {
+    alert("Favorites are empty");
+    // getNasaData();
+    // // return;
+    // document.body.setHTML(
+    //   `<h3>No Favorites marked</h3><div><button onclick='${getNasaData(
+    //     "results"
+    //   )}'>Go back</button></div>`
+    // );
+  }
   arr.forEach((each, i) => {
     let html = `<div class='add'>
     <a href='${each.hdurl}' title='View full Image' target='_blank'>
@@ -67,7 +77,6 @@ function updateDOM(flag) {
     //   .getElementById(i)
     //   .setAttribute("onclick", `saveFavorite('${each.url}')`);
   });
-  console.log(flag);
   if (flag == "results") {
     resultsNav.classList.remove("hidden");
     favoritesNav.classList.add("hidden");
