@@ -62,7 +62,7 @@ function updateDOM(flag) {
     </div>`;
     content += html;
   });
-  imagesContainer.setHTML(content);
+  imagesContainer.innerHTML = content;
   arr.forEach((each, i) => {
     if (flag !== "favorites") {
       document.getElementById(i).onclick = () => {
